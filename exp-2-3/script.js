@@ -5,7 +5,6 @@ let drawing = false;
 let currentPath = null;
 let paths = [];
 
-// Start drawing
 svg.addEventListener("mousedown", (e) => {
     drawing = true;
 
@@ -25,7 +24,6 @@ svg.addEventListener("mousedown", (e) => {
     paths.push(currentPath);
 });
 
-// Draw
 svg.addEventListener("mousemove", (e) => {
     if (!drawing) return;
 
@@ -34,12 +32,10 @@ svg.addEventListener("mousemove", (e) => {
     currentPath.setAttribute("d", d + ` L ${point.x} ${point.y}`);
 });
 
-// Stop drawing
 svg.addEventListener("mouseup", () => {
     drawing = false;
 });
 
-// Get mouse position relative to SVG
 function getPoint(event) {
     const rect = svg.getBoundingClientRect();
     return {
@@ -48,10 +44,10 @@ function getPoint(event) {
     };
 }
 
-// Undo last drawing
 function undo() {
     if (paths.length > 0) {
         const last = paths.pop();
         svg.removeChild(last);
     }
 }
+
