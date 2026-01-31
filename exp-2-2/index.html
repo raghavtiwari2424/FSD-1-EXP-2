@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-2.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">Experiment 2</div>
+    <div class="nav-right">
+        <a href="../exp-2-1/index.html" target="_blank">Experiment 2.1</a>
+        <a href="../exp-2-2/index.html" target="_blank">Experiment 2.2</a>
+        <a href="../exp-2-3/index.html" target="_blank">Experiment 2.3</a>
+    </div>
+</nav>
+
+
+
+<div class="main">
+    <h1>Product Filter</h1>
+
+    <select id="categorySelect" onchange="filterProducts()">
+        <option value="all">All Products</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+    </select>
+
+    <div class="grid" id="products"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
